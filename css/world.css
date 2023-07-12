@@ -5,6 +5,13 @@
     font-weight: 700;
     font-style: normal;
 }
+
+#map {
+    width: 80vw;
+    height: 80vh;
+    margin: 5vh 10vw 5vh 10vw;
+}
+
 html,
 body {
     width: 100%;
@@ -48,9 +55,4 @@ body {
 
 #my_img {
     width: 50px;
-}
-
-#map {
-    height: 600px;
-    margin: 1% 25% 0% 25%;
 }

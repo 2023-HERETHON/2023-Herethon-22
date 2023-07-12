@@ -1,6 +1,6 @@
 window.initMap = function () {
     const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 20, lng: 0 },
+        center: { lat: 15, lng: 0 },
         zoom: 1.5,
         styles: [
             {
@@ -152,6 +152,7 @@ window.initMap = function () {
         {
             label: "도쿄",
             name: "도쿄",
+            star: "4점",
             lat: 35.5020581,
             lng: 138.4504777,
             icon: myIcon,
@@ -159,6 +160,7 @@ window.initMap = function () {
         {
             label: "오사카",
             name: "오사카",
+            star: "4점",
             lat: 34.6775704,
             lng: 135.403636,
             icon: myIcon,
@@ -166,6 +168,7 @@ window.initMap = function () {
         {
             label: "삿포로",
             name: "삿포로",
+            star: "4점",
             lat: 42.9848631,
             lng: 140.9183286,
             icon: myIcon,
@@ -173,25 +176,34 @@ window.initMap = function () {
         {
             label: "후쿠오카",
             name: "후쿠오카",
+            star: "4점",
             lat: 33.6495358,
             lng: 129.9343191,
             icon: myIcon,
         },
     ];
 
-    japan.forEach(({ label, name, lat, lng, icon }) => {
+    var japanMarkers = []; // 일본 마커들을 저장하는 배열
+
+    japan.forEach(({ name, star, lat, lng, icon }) => {
         const marker = new google.maps.Marker({
             position: { lat, lng },
-            label,
+            label: {
+                text: name + "\n" + star,
+                fontSize: "20px",
+                fontFamily: "PyeongChangPeace-Bold",
+            },
             map,
             icon,
         });
+        japanMarkers.push(marker); // 마커를 배열에 추가
     });
 
     const france = [
         {
             label: "파리",
             name: "파리",
+            star: "4점",
             lat: 48.8588255,
             lng: 2.2646345,
             icon: myIcon,
@@ -199,6 +211,7 @@ window.initMap = function () {
         {
             label: "니스",
             name: "니스",
+            star: "4점",
             lat: 43.7031657,
             lng: 7.1704111,
             icon: myIcon,
@@ -206,18 +219,46 @@ window.initMap = function () {
         {
             label: "마르세유",
             name: "마르세유",
+            star: "4점",
             lat: 43.280227,
             lng: 5.2158399,
             icon: myIcon,
         },
     ];
 
-    france.forEach(({ label, name, lat, lng, icon }) => {
+    var franceMarkers = []; // 프랑스 마커들을 저장하는 배열
+
+    france.forEach(({ star, name, lat, lng, icon }) => {
         const marker = new google.maps.Marker({
             position: { lat, lng },
-            label,
-            map,
-            icon,
+            label: {
+                text: name + "\n" + star,
+                fontSize: "20px",
+                fontFamily: "PyeongChangPeace-Bold",
+            },
+            map: map,
+            icon: icon,
+        });
+        franceMarkers.push(marker); // 마커를 배열에 추가
+    });
+    google.maps.event.addListener(map, "zoom_changed", function () {
+        var currentZoom = map.getZoom(); // 현재 줌 레벨 가져오기
+        var minZoomToShowMarker = 5; // 마커가 보이게 하려는 최소 줌 레벨 설정
+
+        japan.forEach((marker) => {
+            if (currentZoom <= minZoomToShowMarker) {
+                marker.setMap(map); // 마커를 지도에 표시
+            } else {
+                marker.setMap(null); // 마커를 지도에서 제거
+            }
+        });
+
+        france.forEach((marker) => {
+            if (currentZoom <= minZoomToShowMarker) {
+                marker.setMap(map); // 마커를 지도에 표시
+            } else {
+                marker.setMap(null); // 마커를 지도에서 제거
+            }
         });
     });
 };

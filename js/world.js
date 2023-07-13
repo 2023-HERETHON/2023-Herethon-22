@@ -152,7 +152,7 @@ window.initMap = function () {
         {
             label: "도쿄",
             name: "도쿄",
-            star: "4점",
+            star: 4,
             lat: 35.5020581,
             lng: 138.4504777,
             icon: myIcon,
@@ -160,7 +160,7 @@ window.initMap = function () {
         {
             label: "오사카",
             name: "오사카",
-            star: "4점",
+            star: 4,
             lat: 34.6775704,
             lng: 135.403636,
             icon: myIcon,
@@ -168,7 +168,7 @@ window.initMap = function () {
         {
             label: "삿포로",
             name: "삿포로",
-            star: "4점",
+            star: 4,
             lat: 42.9848631,
             lng: 140.9183286,
             icon: myIcon,
@@ -176,9 +176,41 @@ window.initMap = function () {
         {
             label: "후쿠오카",
             name: "후쿠오카",
-            star: "4점",
+            star: 4,
             lat: 33.6495358,
             lng: 129.9343191,
+            icon: myIcon,
+        },
+        {
+            label: "아오모리",
+            name: "아오모리",
+            star: 3,
+            lat: 40.8850702,
+            lng: 139.9308109,
+            icon: myIcon,
+        },
+        {
+            label: "후쿠시마",
+            name: "후쿠시마",
+            star: 2,
+            lat: 37.3821022,
+            lng: 139.4447275,
+            icon: myIcon,
+        },
+        {
+            label: "교토",
+            name: "교토",
+            star: 5,
+            lat: 35.0977501,
+            lng: 135.3892183,
+            icon: myIcon,
+        },
+        {
+            label: "오키나와",
+            name: "오키나와",
+            star: 5,
+            lat: 25.9417759,
+            lng: 124.4914603,
             icon: myIcon,
         },
     ];
@@ -190,12 +222,11 @@ window.initMap = function () {
             position: { lat, lng },
             label: {
                 text: name + " " + star + "점",
-                fontSize: "10px",
+                fontSize: "25px",
                 fontFamily: "PyeongChangPeace-Bold",
             },
             map,
             icon,
-            visible: false, // 일단 모든 마커를 숨김
         });
         japanMarkers.push(marker); // 마커를 배열에 추가
     });
@@ -233,7 +264,6 @@ window.initMap = function () {
         const marker = new google.maps.Marker({
             position: { lat, lng },
             label: {
-                text: " ",
                 text: name + " " + star + "점",
                 fontSize: "25px",
                 fontFamily: "PyeongChangPeace-Bold",
@@ -243,16 +273,12 @@ window.initMap = function () {
         });
         franceMarkers.push(marker); // 마커를 배열에 추가
     });
-    google.maps.event.addListener(map, "zoom_changed", function () {
+
+    map.addListener("zoom_changed", () => {
         var currentZoom = map.getZoom(); // 현재 줌 레벨 가져오기
         var minZoomToShowMarker = 5; // 마커가 보이게 하려는 최소 줌 레벨 설정
 
-        infowindow.open(map);
-        map.addListener("zoom_changed", () => {
-            infowindow.setContent("Zoom: " + map.getZoom());
-        });
-
-        japan.forEach((marker) => {
+        japanMarkers.forEach((marker) => {
             if (currentZoom >= minZoomToShowMarker) {
                 marker.setVisible(true); // 마커를 표시
             } else {
@@ -260,11 +286,11 @@ window.initMap = function () {
             }
         });
 
-        france.forEach((marker) => {
-            if (currentZoom <= minZoomToShowMarker) {
-                marker.setMap(map); // 마커를 지도에 표시
+        franceMarkers.forEach((marker) => {
+            if (currentZoom >= minZoomToShowMarker) {
+                marker.setVisible(true); // 마커를 표시
             } else {
-                marker.setMap(null); // 마커를 지도에서 제거
+                marker.setVisible(false); // 마커를 숨김
             }
         });
     });

@@ -141,11 +141,11 @@ window.initMap = function () {
     });
 
     var myIcon = new google.maps.MarkerImage(
-        "/media/total.png",
+        "/media/marker3.png",
         null,
         null,
         null,
-        new google.maps.Size(100, 100)
+        new google.maps.Size(230, 100)
     );
 
     const japan = [
@@ -189,12 +189,13 @@ window.initMap = function () {
         const marker = new google.maps.Marker({
             position: { lat, lng },
             label: {
-                text: name + "\n" + star,
-                fontSize: "20px",
+                text: name + " " + star + "점",
+                fontSize: "10px",
                 fontFamily: "PyeongChangPeace-Bold",
             },
             map,
             icon,
+            visible: false, // 일단 모든 마커를 숨김
         });
         japanMarkers.push(marker); // 마커를 배열에 추가
     });
@@ -203,7 +204,7 @@ window.initMap = function () {
         {
             label: "파리",
             name: "파리",
-            star: "4점",
+            star: 4,
             lat: 48.8588255,
             lng: 2.2646345,
             icon: myIcon,
@@ -211,7 +212,7 @@ window.initMap = function () {
         {
             label: "니스",
             name: "니스",
-            star: "4점",
+            star: 4,
             lat: 43.7031657,
             lng: 7.1704111,
             icon: myIcon,
@@ -219,7 +220,7 @@ window.initMap = function () {
         {
             label: "마르세유",
             name: "마르세유",
-            star: "4점",
+            star: 4,
             lat: 43.280227,
             lng: 5.2158399,
             icon: myIcon,
@@ -232,8 +233,9 @@ window.initMap = function () {
         const marker = new google.maps.Marker({
             position: { lat, lng },
             label: {
-                text: name + "\n" + star,
-                fontSize: "20px",
+                text: " ",
+                text: name + " " + star + "점",
+                fontSize: "25px",
                 fontFamily: "PyeongChangPeace-Bold",
             },
             map: map,
@@ -245,11 +247,16 @@ window.initMap = function () {
         var currentZoom = map.getZoom(); // 현재 줌 레벨 가져오기
         var minZoomToShowMarker = 5; // 마커가 보이게 하려는 최소 줌 레벨 설정
 
+        infowindow.open(map);
+        map.addListener("zoom_changed", () => {
+            infowindow.setContent("Zoom: " + map.getZoom());
+        });
+
         japan.forEach((marker) => {
-            if (currentZoom <= minZoomToShowMarker) {
-                marker.setMap(map); // 마커를 지도에 표시
+            if (currentZoom >= minZoomToShowMarker) {
+                marker.setVisible(true); // 마커를 표시
             } else {
-                marker.setMap(null); // 마커를 지도에서 제거
+                marker.setVisible(false); // 마커를 숨김
             }
         });
 

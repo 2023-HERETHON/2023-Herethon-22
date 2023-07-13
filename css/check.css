@@ -62,7 +62,7 @@ body {
 
 #pro {
     width: 20%;
-    margin: 5% 40% 2% 40%;
+    margin: 4% 40% 2% 40%;
 }
 
 .check {
@@ -81,6 +81,19 @@ body {
     margin-bottom: 0.5%;
 }
 
+#id {
+    background-color: #ffffff;
+    background-image: url("/media/ch_g.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 6%;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5%;
+    width: 33%;
+    margin-bottom: 0.5%;
+}
+
 #pass {
     background-color: #ffffff;
     background-image: url("/media/ch_g.png");
@@ -93,6 +106,11 @@ body {
     width: 33%;
 }
 
+#id::placeholder {
+    font-family: "PyeongChangPeace-Light";
+    font-size: medium;
+}
+
 #pass::placeholder {
     font-family: "PyeongChangPeace-Light";
     font-size: medium;
@@ -103,7 +121,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 0.5%;
-    margin: 2%;
+    margin: 1.5% 2% 2% 2%;
     font-family: "PyeongChangPeace-Light";
     font-size: larger;
     color: #1d0090;

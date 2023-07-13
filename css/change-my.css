@@ -168,11 +168,11 @@ img {
   object-fit: cover;
 }
 
-/* ------------------- */
+/* ---------info-form---------- */
 
 #info-form-div {
   width: 70%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 #info-form-div > h2 {

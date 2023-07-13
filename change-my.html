@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/change-my.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/change-my.css" />
 
     <title>changeMyInfo</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="navbar">
-        <button id="back-btn"><img src="media/icBack.png" alt=""></button>
-        <span>마이페이지</span>
-        <button id="home-btn"><img src="media/icHome.png" alt=""></button>
+      <button id="back-btn"><img src="media/icBack.png" alt="" /></button>
+      <span>마이페이지</span>
+      <button id="home-btn"><img src="media/icHome.png" alt="" /></button>
     </div>
 
     <div id="my-main">
-        <div id="profile-div">
-            <div id="pic-container">
-                <img src="media/icMypageProfile.png" alt="">
-            </div>
-            <div id="edit-pic-container">
-                <img src="media/icEditPic.png" alt="">
-            </div>
-            <button id="save-btn">저장하기</button>
+      <div id="profile-div">
+        <div id="pic-container">
+          <img src="media/icMypageProfile.png" alt="" />
         </div>
+        <div id="edit-pic-container">
+          <img src="media/icEditPic.png" alt="" />
+        </div>
+        <button id="save-btn">저장하기</button>
+      </div>
 
-        <div id="info-form-div">
-            <h2>개인정보 수정</h2>
-            <form class="input">
-                <input type="text" placeholder="nickname" id="name" />
-                <input type="text" placeholder="ID" id="id" />
-                <input type="email" placeholder="e-mail" id="mail" />
-                <input type="password" placeholder="password" id="pass1" />
-                <input type="password" placeholder="new password" id="pass2" />
-                <input
-                    type="password"
-                    placeholder="re-enter password "
-                    id="pass3"
-                />
-                
-            </form>
-        </div>
+      <div id="info-form-div">
+        <h2>개인정보 수정</h2>
+        <form class="input">
+          <input type="text" placeholder="nickname" id="name" />
+          <input type="text" placeholder="ID" id="id" />
+          <input type="email" placeholder="e-mail" id="mail" />
+          <input type="password" placeholder="new password" id="new-pass" />
+          <input
+            type="password"
+            placeholder="re-enter password "
+            id="re-pass"
+          />
+        </form>
+      </div>
     </div>
 
     <script src="js/change-my.js"></script>
-</body>
-
+  </body>
 </html>

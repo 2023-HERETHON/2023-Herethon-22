@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/rating-item-modal.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="safety-modal">
+      <div class="safety-modal-content">
+        <button class="close-btn">
+          <img src="media/icClose.png" alt="close-button" />
+        </button>
+        <button class="back-btn">
+          <img src="media/icBack.png" alt="" />
+        </button>
+
+        <div class="flag">
+          <div class="flag-wrap">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="scores-div">
+          <div class="average-score">
+            <div class="score-text">
+              <span>치안</span><span class="score">0점</span>
+            </div>
+            <div class="average-star-div">
+              <div class="star-container" id="star1">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star2">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star3">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star4">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star5">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="my-score">
+            <p>내 평가</p>
+            <div class="my-star-div">
+              <!-- <div class="star-container" id="star1">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star2">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star3">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star4">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <div class="star-container" id="star5">
+                <img src="media/icEmptyStar.png" alt="" />
+              </div>
+              <span class="score">0점</span>
+            </div> -->
+
+            <form id="star-rating-form" action="">
+              <fieldset>
+                <input type="radio" name="star" value="1" id="rate1" /><label
+                  for="rate1"
+                  ><img src="media/icEmptyStar.png" alt="star"
+                /></label>
+                <input type="radio" name="star" value="2" id="rate2" /><label
+                  for="rate2"
+                  ><img src="media/icEmptyStar.png" alt="star"
+                /></label>
+                <input type="radio" name="star" value="3" id="rate3" /><label
+                  for="rate3"
+                  ><img src="media/icEmptyStar.png" alt="star"
+                /></label>
+                <input type="radio" name="star" value="4" id="rate4" /><label
+                  for="rate4"
+                  ><img src="media/icEmptyStar.png" alt="star"
+                /></label>
+                <input type="radio" name="star" value="5" id="rate5" /><label
+                  for="rate5"
+                  ><img src="media/icEmptyStar.png" alt="star"
+                /></label>
+              </fieldset>
+            </form>
+            <span class="score" id="my-score-value">0점</span>
+          </div>
+
+          
+        </div>
+        <div class="others-score-div">
+          <div class="otheruser">
+            <div class="profile-container">
+              <div id="img-container">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="other-info">
+              <p><span id="nickname">000</span>님</p>
+              <div class="other-star-div">
+                <div class="star-container" id="star1">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star2">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star3">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star4">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star5">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <span class="score">0점</span>
+              </div>
+            </div>
+          </div>
+          <div class="otheruser">
+            <div class="profile-container">
+              <div id="img-container">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="other-info">
+              <p><span id="nickname">000</span>님</p>
+              <div class="other-star-div">
+                <div class="star-container" id="star1">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star2">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star3">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star4">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star5">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <span class="score">0점</span>
+              </div>
+            </div>
+          </div>
+          <div class="otheruser">
+            <div class="profile-container">
+              <div id="img-container">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="other-info">
+              <p><span id="nickname">000</span>님</p>
+              <div class="other-star-div">
+                <div class="star-container" id="star1">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star2">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star3">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star4">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star5">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <span class="score">0점</span>
+              </div>
+            </div>
+          </div>
+          <div class="otheruser">
+            <div class="profile-container">
+              <div id="img-container">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="other-info">
+              <p><span id="nickname">000</span>님</p>
+              <div class="other-star-div">
+                <div class="star-container" id="star1">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star2">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star3">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star4">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star5">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <span class="score">0점</span>
+              </div>
+            </div>
+          </div>
+          <div class="otheruser">
+            <div class="profile-container">
+              <div id="img-container">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="other-info">
+              <p><span id="nickname">000</span>님</p>
+              <div class="other-star-div">
+                <div class="star-container" id="star1">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star2">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star3">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star4">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <div class="star-container" id="star5">
+                  <img src="media/icEmptyStar.png" alt="" />
+                </div>
+                <span class="score">0점</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="rating-item-modal.js"></script>
+  </body>
+</html>

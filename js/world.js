@@ -147,11 +147,11 @@ window.initMap = function () {
     });
 
     var myIcon = new google.maps.MarkerImage(
-        "/media/marker3.png",
+        "/media/finish.png",
         null,
         null,
         null,
-        new google.maps.Size(230, 100)
+        new google.maps.Size(160, 100)
     );
 
     const japan = [

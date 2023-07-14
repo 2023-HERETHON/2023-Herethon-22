@@ -38,9 +38,9 @@ body {
 }
 
 #logo {
-    width: 34%;
-    margin-left: 33%;
-    margin-right: 33%;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 .input {
@@ -50,7 +50,7 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 5%;
-    padding-bottom: 20%;
+    padding-bottom: 24%;
 }
 
 #id {
@@ -96,4 +96,5 @@ input::placeholder {
 
 #go {
     color: black;
+    margin-left: 2%;
 }

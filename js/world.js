@@ -333,16 +333,37 @@ window.initMap = function () {
     getFoodModal();
 
     // 모달 닫기 버튼 클릭 이벤트 핸들러 추가
-    var closeBtn = document.getElementById("close-btn");
-    closeBtn.addEventListener("click", function () {
-      // 모달 창 닫기
-      modal.style.display = "none";
-    });
+    // var closeBtn = document.getElementById("close-btn");
+    // closeBtn.addEventListener("click", function () {
+    //   // 모달 창 닫기
+    //   modal.style.display = "none";
+    // });
+
+    closeBtnEvent();
+    backBtnEvent();
   }
 };
 
-function closeEvent() {
-  var closeBtn;
+function closeBtnEvent() {
+  $(".close-btn").click(function () {
+    $("#modal").fadeOut();
+    $("#safety-modal").fadeOut();
+    $("#price-modal").fadeOut();
+    $("#transport-modal").fadeOut();
+    $("#entertainment-modal").fadeOut();
+    $("#food-modal").fadeOut();
+  });
+}
+
+function backBtnEvent() {
+  $(".back-btn").click(function () {
+    $("#safety-modal").hide();
+    $("#price-modal").hide();
+    $("#transport-modal").hide();
+    $("#entertainment-modal").hide();
+    $("#food-modal").hide();
+    $("#modal").show();
+  });
 }
 
 var safetyModal = document.getElementById("safety-modal");
@@ -424,3 +445,5 @@ function getFoodModal() {
     foodModal.style.display = "block";
   });
 }
+
+// my-score-div 별점 표시 함수

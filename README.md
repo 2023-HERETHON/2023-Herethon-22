@@ -34,6 +34,11 @@
 
 <h2>팀원 소개</h2>
 
+| Left-aligned | Center-aligned | Right-aligned |
+| :----------- | :------------: | ------------: |
+| git status   |   git status   |    git status |
+| git diff     |    git diff    |      git diff |
+
 |방혜진|내용|설명|
 |:---:||:---:||:---:|
 기획 디자인- 동덕여자대학교-  

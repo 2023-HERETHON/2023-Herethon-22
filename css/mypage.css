@@ -129,7 +129,7 @@ img {
 }
 
 #pic-container:before,
-#city-flag-container:before {
+.city-flag-container:before {
   content: "";
   display: block;
   padding-top: 100%;
@@ -217,7 +217,7 @@ img {
   width: 10%;
 }
 
-#city-flag-container {
+.city-flag-container {
   display: inline;
   position: relative;
   overflow: hidden;
@@ -235,4 +235,9 @@ img {
 
 button:hover {
   cursor: pointer;
+}
+
+/* city-score 감춤 */
+#city-score {
+  display: none;
 }

@@ -32,7 +32,7 @@
         <p>내가 평가한 도시</p>
         <div id="city-list-div">
           <div class="city">
-            <div id="city-flag-container">
+            <div class="city-flag-container">
               <img
                 id="city-flag"
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png"
@@ -44,9 +44,20 @@
             <button class="get-modal-btn">
               <img src="media/icGo.png" alt="" />
             </button>
+
+            <!-- 도시에 대한 score 값들 -->
+            <div id="city-score">
+              <span id="total-score">1</span>
+              <span id="safety-score">2</span>
+              <span id="price-score">3</span>
+              <span id="transport-score">4</span>
+              <span id="entertainment-score">5</span>
+              <span id="food-score">1</span>
+            </div>
           </div>
+
           <div class="city">
-            <div id="city-flag-container">
+            <div class="city-flag-container">
               <img
                 id="city-flag"
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png"
@@ -58,9 +69,20 @@
             <button class="get-modal-btn">
               <img src="media/icGo.png" alt="" />
             </button>
+
+            <!-- 도시에 대한 score 값들 -->
+            <div id="city-score">
+              <span id="total-score">1</span>
+              <span id="safety-score">2</span>
+              <span id="price-score">3</span>
+              <span id="transport-score">4</span>
+              <span id="entertainment-score">5</span>
+              <span id="food-score">1</span>
+            </div>
           </div>
+
           <div class="city">
-            <div id="city-flag-container">
+            <div class="city-flag-container">
               <img id="city-flag" src="" alt="" />
             </div>
             <span id="continent">유럽</span><span id="country">프랑스</span
@@ -68,9 +90,19 @@
             <button class="get-modal-btn">
               <img src="media/icGo.png" alt="" />
             </button>
+
+            <!-- 도시에 대한 score 값들 -->
+            <div id="city-score">
+              <span id="total-score">1</span>
+              <span id="safety-score">2</span>
+              <span id="price-score">3</span>
+              <span id="transport-score">4</span>
+              <span id="entertainment-score">5</span>
+              <span id="food-score">1</span>
+            </div>
           </div>
           <div class="city">
-            <div id="city-flag-container">
+            <div class="city-flag-container">
               <img id="city-flag" src="" alt="" />
             </div>
             <span id="continent">아시아</span><span id="country">일본</span
@@ -78,9 +110,19 @@
             <button class="get-modal-btn">
               <img src="media/icGo.png" alt="" />
             </button>
+
+            <!-- 도시에 대한 score 값들 -->
+            <div id="city-score">
+              <span id="total-score">1</span>
+              <span id="safety-score">2</span>
+              <span id="price-score">3</span>
+              <span id="transport-score">4</span>
+              <span id="entertainment-score">5</span>
+              <span id="food-score">1</span>
+            </div>
           </div>
           <div class="city">
-            <div id="city-flag-container">
+            <div class="city-flag-container">
               <img id="city-flag" src="" alt="" />
             </div>
             <span id="continent">아시아</span><span id="country">일본</span
@@ -88,6 +130,16 @@
             <button class="get-modal-btn">
               <img src="media/icGo.png" alt="" />
             </button>
+
+            <!-- 도시에 대한 score 값들 -->
+            <div id="city-score">
+              <span id="total-score">1</span>
+              <span id="safety-score">2</span>
+              <span id="price-score">3</span>
+              <span id="transport-score">4</span>
+              <span id="entertainment-score">5</span>
+              <span id="food-score">1</span>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +148,7 @@
     <!-- Modal -->
     <div class="modal">
       <div class="modal-content">
-        <button id="close-btn">
+        <button class="close-btn">
           <img src="media/icClose.png" alt="close-button" />
         </button>
 
@@ -116,7 +168,8 @@
         <div id="rating-div">
           <div id="total">
             <div class="rating-text">
-              <span>총 평점</span><span class="score">0점</span>
+              <span class="rating-text-title">총 평점</span
+              ><span class="score">0점</span>
             </div>
             <form id="star-rating-form" action="">
               <fieldset>
@@ -146,7 +199,8 @@
 
           <div id="safety">
             <div class="rating-text">
-              <span>치안</span><span class="score"><span>0</span>점</span>
+              <span class="rating-text-title">치안</span
+              ><span class="score"><span>0</span>점</span>
             </div>
             <form id="star-rating-form" action="">
               <fieldset>
@@ -176,7 +230,8 @@
 
           <div id="price">
             <div class="rating-text">
-              <span>물가</span><span class="score"><span>0</span>점</span>
+              <span class="rating-text-title">물가</span
+              ><span class="score"><span>0</span>점</span>
             </div>
             <form id="star-rating-form" action="">
               <fieldset>
@@ -206,7 +261,7 @@
 
           <div id="transport">
             <div class="rating-text">
-              <span>교통 편의성</span
+              <span class="rating-text-title">교통 편의성</span
               ><span class="score"><span>0</span>점</span>
             </div>
             <form id="star-rating-form" action="">
@@ -237,7 +292,8 @@
 
           <div id="entertainment">
             <div class="rating-text">
-              <span>즐길 거리</span><span class="score"><span>0</span>점</span>
+              <span class="rating-text-title">즐길 거리</span
+              ><span class="score"><span>0</span>점</span>
             </div>
             <form id="star-rating-form" action="">
               <fieldset>
@@ -262,7 +318,8 @@
 
           <div id="food">
             <div class="rating-text">
-              <span>먹거리</span><span class="score"><span>0</span>점</span>
+              <span class="rating-text-title">먹거리</span
+              ><span class="score"><span>0</span>점</span>
             </div>
             <form id="star-rating-form" action="">
               <fieldset>

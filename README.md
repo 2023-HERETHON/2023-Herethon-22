@@ -20,17 +20,23 @@
 <치안>, <물가>, <교통 편의성>, <즐길 거리>, <먹거리> 와 같이 세분화 된 평가 항목과 이에 따른 별점을 확인하여 여행지에 대해 얻고 싶은 정보를, 쉽고 간편하게 얻어 보세요! 또, 다양한 평가 항목의 별점을 반영한 <총 별점>으로 여행지에 대한 사용자들의 함축적인 평가를 만나보세요!
 
 별천지로 내게 딱 맞는 여행지 고르고, 행복한 여행을 떠나요!
-
+</br>
+</br>
+</br>
+</br>
 <h2>기술 스택</h2>
 
 프론트엔드 
 
 <img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black" />  <img src="https://img.shields.io/badge/jquery-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white" /> <img src="https://img.shields.io/badge/google%20maps-%234285F4.svg?&style=for-the-badge&logo=google%20maps&logoColor=white" />
+</br>
+</br>
 
 백엔드
 
 <img src="https://img.shields.io/badge/google%20maps-%234285F4.svg?&style=for-the-badge&logo=google%20maps&logoColor=white" />  <img src="https://img.shields.io/badge/sqlite-%23003B57.svg?&style=for-the-badge&logo=sqlite&logoColor=white" />
-
+</br>
+</br>
 기획·디자인
 
 <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white" />

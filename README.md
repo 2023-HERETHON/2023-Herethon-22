@@ -10,11 +10,11 @@
 
 기술 스택
 
-프론트엔드:   
+프론트엔드:  html, css, javascripts, Jquery, google maps api
 
-백엔드:  
+백엔드:  django(pyhton), sqlite3
 
-기획·디자인: 
+기획·디자인: figma
 
 팀원 소개
 

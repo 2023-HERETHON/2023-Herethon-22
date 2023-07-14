@@ -153,389 +153,204 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal">
+        <div id="modal" class="modal">
             <div class="modal-content">
-                <button class="close-btn">
-                    <img src="{% static 'media/icClose.png' %}" alt="close-button" />
-                </button>
-
-                <div id="header">
-                    <div id="modal-flag">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png"
-                            alt=""
-                        />
-                    </div>
-                    <h2 id="header-text">
-                        <span id="modal-country">일본</span><span> - </span
-                        ><span id="modal-city">도쿄</span>의 평점
-                    </h2>
+              <button class="close-btn">
+                <img src="{% static 'media/icClose.png' %}" alt="close-button" />
+              </button>
+      
+              <div id="header">
+                <div id="modal-flag">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png"
+                    alt=""
+                  />
                 </div>
-
-                <div id="rating-div">
-                    <div id="total">
-                        <div class="rating-text">
-                            <span class="rating-text-title">총 평점</span
-                            ><span class="score">0점</span>
-                        </div>
-                        <form id="star-rating-form" action="">
-                            <fieldset>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="1"
-                                    id="rate1"
-                                /><label for="rate1"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="2"
-                                    id="rate2"
-                                /><label for="rate2"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="3"
-                                    id="rate3"
-                                /><label for="rate3"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="4"
-                                    id="rate4"
-                                /><label for="rate4"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="5"
-                                    id="rate5"
-                                /><label for="rate5"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <div id="safety">
-                        <div class="rating-text">
-                            <span class="rating-text-title">치안</span
-                            ><span class="score"><span>0</span>점</span>
-                        </div>
-                        <form id="star-rating-form" action="">
-                            <fieldset>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="1"
-                                    id="rate1"
-                                /><label for="rate1"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="2"
-                                    id="rate2"
-                                /><label for="rate2"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="3"
-                                    id="rate3"
-                                /><label for="rate3"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="4"
-                                    id="rate4"
-                                /><label for="rate4"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="5"
-                                    id="rate5"
-                                /><label for="rate5"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <div id="price">
-                        <div class="rating-text">
-                            <span class="rating-text-title">물가</span
-                            ><span class="score"><span>0</span>점</span>
-                        </div>
-                        <form id="star-rating-form" action="">
-                            <fieldset>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="1"
-                                    id="rate1"
-                                /><label for="rate1"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="2"
-                                    id="rate2"
-                                /><label for="rate2"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="3"
-                                    id="rate3"
-                                /><label for="rate3"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="4"
-                                    id="rate4"
-                                /><label for="rate4"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="5"
-                                    id="rate5"
-                                /><label for="rate5"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <div id="transport">
-                        <div class="rating-text">
-                            <span class="rating-text-title">교통 편의성</span
-                            ><span class="score"><span>0</span>점</span>
-                        </div>
-                        <form id="star-rating-form" action="">
-                            <fieldset>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="1"
-                                    id="rate1"
-                                /><label for="rate1"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="2"
-                                    id="rate2"
-                                /><label for="rate2"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="3"
-                                    id="rate3"
-                                /><label for="rate3"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="4"
-                                    id="rate4"
-                                /><label for="rate4"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="5"
-                                    id="rate5"
-                                /><label for="rate5"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <div id="entertainment">
-                        <div class="rating-text">
-                            <span>즐길 거리</span
-                            ><span class="score"><span>0</span>점</span>
-                        </div>
-                        <form id="star-rating-form" action="">
-                            <fieldset>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="1"
-                                /><label for="rate1"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="2"
-                                /><label for="rate2"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="3"
-                                /><label for="rate3"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="4"
-                                /><label for="rate4"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="5"
-                                /><label for="rate5"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <div id="food">
-                        <div class="rating-text">
-                            <span>먹거리</span
-                            ><span class="score"><span>0</span>점</span>
-                        </div>
-                        <form id="star-rating-form" action="">
-                            <fieldset>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="1"
-                                    id="rate1"
-                                /><label for="rate1"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="2"
-                                    id="rate2"
-                                /><label for="rate2"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="3"
-                                    id="rate3"
-                                /><label for="rate3"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="4"
-                                    id="rate4"
-                                /><label for="rate4"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                                <input
-                                    type="radio"
-                                    name="star"
-                                    value="5"
-                                    id="rate5"
-                                /><label for="rate5"
-                                    ><img
-                                        src="{% static 'media/icEmptyStar.png' %}"
-                                        alt="star"
-                                /></label>
-                            </fieldset>
-                        </form>
-                    </div>
+                <h2 id="header-text">
+                  <span id="modal-country">일본</span><span> - </span
+                  ><span id="modal-city">도쿄</span>의 평점
+                </h2>
+              </div>
+      
+              <div id="rating-div">
+                <div id="total">
+                  <div class="rating-text">
+                    <span>총 평점</span><span class="score">0점</span>
+                  </div>
+                  <form id="star-rating-form" action="">
+                    <fieldset>
+                      <input type="radio" name="star" value="1" id="rate1" /><label
+                        for="rate1"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="2" id="rate2" /><label
+                        for="rate2"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="3" id="rate3" /><label
+                        for="rate3"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="4" id="rate4" /><label
+                        for="rate4"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="5" id="rate5" /><label
+                        for="rate5"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                    </fieldset>
+                  </form>
                 </div>
+      
+                <div id="safety">
+                  <div class="rating-text">
+                    <span>치안</span><span class="score"><span>0</span>점</span>
+                  </div>
+                  <form id="star-rating-form" action="">
+                    <fieldset>
+                      <input type="radio" name="star" value="1" id="rate1" /><label
+                        for="rate1"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="2" id="rate2" /><label
+                        for="rate2"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="3" id="rate3" /><label
+                        for="rate3"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="4" id="rate4" /><label
+                        for="rate4"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="5" id="rate5" /><label
+                        for="rate5"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                    </fieldset>
+                  </form>
+                </div>
+      
+                <div id="price">
+                  <div class="rating-text">
+                    <span>물가</span><span class="score"><span>0</span>점</span>
+                  </div>
+                  <form id="star-rating-form" action="">
+                    <fieldset>
+                      <input type="radio" name="star" value="1" id="rate1" /><label
+                        for="rate1"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="2" id="rate2" /><label
+                        for="rate2"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="3" id="rate3" /><label
+                        for="rate3"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="4" id="rate4" /><label
+                        for="rate4"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="5" id="rate5" /><label
+                        for="rate5"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                    </fieldset>
+                  </form>
+                </div>
+      
+                <div id="transport">
+                  <div class="rating-text">
+                    <span>교통 편의성</span
+                    ><span class="score"><span>0</span>점</span>
+                  </div>
+                  <form id="star-rating-form" action="">
+                    <fieldset>
+                      <input type="radio" name="star" value="1" id="rate1" /><label
+                        for="rate1"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="2" id="rate2" /><label
+                        for="rate2"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="3" id="rate3" /><label
+                        for="rate3"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="4" id="rate4" /><label
+                        for="rate4"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="5" id="rate5" /><label
+                        for="rate5"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                    </fieldset>
+                  </form>
+                </div>
+      
+                <div id="entertainment">
+                  <div class="rating-text">
+                    <span>즐길 거리</span><span class="score"><span>0</span>점</span>
+                  </div>
+                  <form id="star-rating-form" action="">
+                    <fieldset>
+                      <input type="radio" name="star" value="1" /><label for="rate1"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="2" /><label for="rate2"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="3" /><label for="rate3"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="4" /><label for="rate4"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="5" /><label for="rate5"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                    </fieldset>
+                  </form>
+                </div>
+      
+                <div id="food">
+                  <div class="rating-text">
+                    <span>먹거리</span><span class="score"><span>0</span>점</span>
+                  </div>
+                  <form id="star-rating-form" action="">
+                    <fieldset>
+                      <input type="radio" name="star" value="1" id="rate1" /><label
+                        for="rate1"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="2" id="rate2" /><label
+                        for="rate2"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="3" id="rate3" /><label
+                        for="rate3"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="4" id="rate4" /><label
+                        for="rate4"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                      <input type="radio" name="star" value="5" id="rate5" /><label
+                        for="rate5"
+                        ><img src="{% static 'media/icEmptyStar.png' %}" alt="star"
+                      /></label>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
 
         <script src="{% static 'js/mypage-modal.js' %}"></script>
         <script src="{% static 'js/mypage.js' %}"></script>

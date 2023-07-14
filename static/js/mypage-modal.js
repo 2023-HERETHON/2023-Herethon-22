@@ -53,55 +53,55 @@ function getEachScore(Array) {
         .find("label")
         .eq(0)
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "{% static 'media/icFilledStar.png' %}");
     } else if (Array[i] == radioValueArray[1]) {
       form
         .find("label")
         .eq(1)
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "{% static 'media/icFilledStar.png' %}");
       form
         .find("label")
         .eq(1)
         .prevAll()
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
     } else if (Array[i] == radioValueArray[2]) {
       form
         .find("label")
         .eq(2)
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
       form
         .find("label")
         .eq(2)
         .prevAll()
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
     } else if (Array[i] == radioValueArray[3]) {
       form
         .find("label")
         .eq(3)
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
       form
         .find("label")
         .eq(3)
         .prevAll()
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
     } else if (Array[i] == radioValueArray[4]) {
       form
         .find("label")
         .eq(4)
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
       form
         .find("label")
         .eq(4)
         .prevAll()
         .find("img")
-        .attr("src", "media/icFilledStar.png");
+        .attr("src", "static/media/icFilledStar.png");
     }
   }
 }

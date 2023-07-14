@@ -1,3 +1,4 @@
+
 window.initMap = function () {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 15, lng: 0 },
@@ -147,7 +148,7 @@ window.initMap = function () {
   });
 
   var myIcon = new google.maps.MarkerImage(
-    "static/media/finish.png",
+    "{% static 'media/finish.png' %}",
     null,
     null,
     null,

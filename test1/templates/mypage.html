@@ -13,7 +13,7 @@
     </head>
 
     <body>
-
+        {% block content %}
         
         <div id="navbar">
             <button id="back-btn"><img src="media/icBack.png" alt="" /></button>
@@ -32,7 +32,7 @@
         </div>
 
         <div id="cities-div">
-            <h2><span id="username">ㅁㅁㅁ</span> 님의 마이페이지</h2>
+            <h2><span id="username">{{user.nickname}}</span> 님의 마이페이지</h2>
             <p>내가 평가한 도시</p>
 
         <!-- 별점 value 값 가져옴.. admin페이지에서 작성된 값. -->
@@ -295,6 +295,6 @@
             </div>
         </div>
 
-
+        {% endblock %}
     </body>
 </html>

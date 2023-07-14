@@ -21,9 +21,9 @@
 
 프론트엔드:   <img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black" />  <img src="https://img.shields.io/badge/jquery-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white" /> <img src="https://img.shields.io/badge/google%20maps-%234285F4.svg?&style=for-the-badge&logo=google%20maps&logoColor=white" />
 
-백엔드:  django(pyhton), sqlite3
+백엔드:  <img src="https://img.shields.io/badge/google%20maps-%234285F4.svg?&style=for-the-badge&logo=google%20maps&logoColor=white" />  <img src="https://img.shields.io/badge/sqlite-%23003B57.svg?&style=for-the-badge&logo=sqlite&logoColor=white" />
 
-기획·디자인: figma
+기획·디자인: <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white" />
 
 
 <h2>팀원 소개</h2>

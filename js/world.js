@@ -138,6 +138,12 @@ window.initMap = function () {
                 ],
             },
         ],
+        panControl: false,
+        zoomControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        overviewMapControl: false,
     });
 
     var myIcon = new google.maps.MarkerImage(
@@ -294,4 +300,36 @@ window.initMap = function () {
             }
         });
     });
+
+    var infowindow = new google.maps.InfoWindow();
+    // 마커 클릭 이벤트 핸들러 추가
+    japanMarkers.forEach((marker) => {
+        marker.addListener("click", function () {
+            // 마커 클릭 시 모달 창 표시
+            showModal(marker);
+        });
+    });
+
+    franceMarkers.forEach((marker) => {
+        marker.addListener("click", function () {
+            // 마커 클릭 시 모달 창 표시
+            showModal(marker);
+        });
+    });
+
+    // 모달 창 표시 함수
+    function showModal(marker) {
+        var modal = document.getElementById("modal");
+        var modalContent = document.getElementById("modal-content");
+
+        // 모달 창 표시
+        modal.style.display = "block";
+
+        // 모달 닫기 버튼 클릭 이벤트 핸들러 추가
+        var closeBtn = document.getElementById("close-btn");
+        closeBtn.addEventListener("click", function () {
+            // 모달 창 닫기
+            modal.style.display = "none";
+        });
+    }
 };

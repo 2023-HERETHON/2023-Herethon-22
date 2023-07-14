@@ -34,7 +34,7 @@
 
 <h2>팀원 소개</h2>
 
-| Left-aligned | Center-aligned | Right-aligned |
+| 방혜진 | 윤윤지 | 이선아 | 김지민 | 윤서아 | 황다은 |
 | :----------- | :------------: | ------------: |
 | git status   |   git status   |    git status |
 | git diff     |    git diff    |      git diff |

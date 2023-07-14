@@ -16,7 +16,7 @@
 
 별천지로 내게 딱 맞는 여행지 고르고, 행복한 여행을 떠나요!
 
-기술 스택
+<h2>기술 스택</h2>
 
 프론트엔드:  html, css, javascripts, Jquery, google maps api
 

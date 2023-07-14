@@ -1,6 +1,6 @@
 <div align=center>
-<h1># 2023-Herethon-3</h1>
-2023 여기톤 : HERETHON 3조
+<h1># 2023-Herethon-3
+2023 여기톤 : HERETHON 3조</h1>
 
 <h2>서비스 소개</h2>
 

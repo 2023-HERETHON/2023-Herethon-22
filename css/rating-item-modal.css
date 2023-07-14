@@ -6,7 +6,8 @@
   font-style: normal;
 }
 
-#safety-modal {
+#safety-modal,
+#price-modal {
   position: fixed;
   background: rgba(0, 0, 0, 0.4);
   top: 0;
@@ -232,11 +233,16 @@
   width: 60%;
 }
 
-.score {
+#my-score-value {
   display: flex;
+  flex-direction: row;
   align-items: center;
 
   font-size: 1.3rem;
+}
+
+#my-score-data {
+  display: none;
 }
 
 /* -----------others-score-div------ */

@@ -19,7 +19,7 @@
 
 <h2>기술 스택</h2>
 
-프론트엔드:   <img src="https://img.shields.io/badge/html-#E34F26?style=flat&logo=html5&logoColor=white"/>, css, javascripts, Jquery, google maps api
+프론트엔드:   html, css, javascripts, Jquery, google maps api<img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" />
 
 백엔드:  django(pyhton), sqlite3
 

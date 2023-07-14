@@ -1,5 +1,11 @@
 // 모달용 jQuery
 
+//닫기 버튼 이벤트
+$(".close-btn").click(function () {
+  $(".modal").fadeOut();
+  $(".safety-modal").fadeOut();
+});
+
 //modal click 이벤트
 $(".get-modal-btn").click(function () {
   //모달 띄움
@@ -26,6 +32,7 @@ $(".get-modal-btn").click(function () {
 
   //스코어 모달에 그려주기
   getEachScore(scores);
+  //별에 마우스 오버시 별 색 바뀜
 });
 
 function getEachScore(Array) {
@@ -33,24 +40,85 @@ function getEachScore(Array) {
 
   for (var i = 0; i < ratingDiv.children().length; i++) {
     var eachScoreDiv = ratingDiv.children().eq(i);
-    console.log(eachScoreDiv.attr("id"));
 
     var ratingText = eachScoreDiv.children(".rating-text");
-    console.log(ratingText.children(".rating-text-title").text());
     ratingText.children(".score").text(`${Array[i]}점`);
 
     //score에 맞게 별점 채우기
     var form = eachScoreDiv.children("#star-rating-form");
-    var fieldset = form.children("fieldset");
+    var radioValueArray = getRadioValueArray(form);
+
+    if (Array[i] == radioValueArray[0]) {
+      form
+        .find("label")
+        .eq(0)
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+    } else if (Array[i] == radioValueArray[1]) {
+      form
+        .find("label")
+        .eq(1)
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+      form
+        .find("label")
+        .eq(1)
+        .prevAll()
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+    } else if (Array[i] == radioValueArray[2]) {
+      form
+        .find("label")
+        .eq(2)
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+      form
+        .find("label")
+        .eq(2)
+        .prevAll()
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+    } else if (Array[i] == radioValueArray[3]) {
+      form
+        .find("label")
+        .eq(3)
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+      form
+        .find("label")
+        .eq(3)
+        .prevAll()
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+    } else if (Array[i] == radioValueArray[4]) {
+      form
+        .find("label")
+        .eq(4)
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+      form
+        .find("label")
+        .eq(4)
+        .prevAll()
+        .find("img")
+        .attr("src", "media/icFilledStar.png");
+    }
   }
 }
 
-$(".close-btn").click(function () {
-  $(".modal").fadeOut();
-  $(".safety-modal").fadeOut();
-});
+function getRadioValueArray(form) {
+  var fieldset = form.children("fieldset");
+
+  var radioValueArray = new Array();
+  for (var i = 0; i < fieldset.find("input").length; i++) {
+    radioValueArray.push(fieldset.find("input").eq(i).attr("value"));
+  }
+
+  return radioValueArray;
+}
 
 //별에 마우스 오버시 별 색이 채워짐
+
 // $("label").hover(
 //   function () {
 //     $(this).find("img").attr("src", "media/icFilledStar.png");
@@ -58,16 +126,10 @@ $(".close-btn").click(function () {
 //     $(this).nextAll().find("img").attr("src", "media/icEmptyStar.png");
 //   },
 //   function () {
+//     //마우스 오버가 어디에도 되지 않았을 때
 //     $(this).find("img").attr("src", "media/icEmptyStar.png");
 //   }
 // );
 
 // //별 클릭시 클릭된 별의 value가 점수로 표시됨
-// $("input[name='star']").change(function () {
-//   var score = $("input[name='star']:checked").val();
-
-//   var form = $(this).parent().parent();
-//   var scoreSpan = form.prev().children().last();
-
-//   scoreSpan.html(`${score}점`);
-// });
+function changeScore() {}
